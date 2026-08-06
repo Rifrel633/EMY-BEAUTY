@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMY BEAUTY | Crèmes Capillaires & Huiles Naturelles 100% Bio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+
+--green:#355E3B;
+--green2:#5C8D61;
+--gold:#C7A86C;
+--beige:#F6F1E8;
+--brown:#684B33;
+--white:#ffffff;
+--shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:var(--beige);
+color:#333;
+line-height:1.7;
+overflow-x:hidden;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+section{
+padding:80px 7%;
+}
+
+h2{
+font-size:38px;
+font-family:"Cormorant Garamond",serif;
+text-align:center;
+color:var(--green);
+margin-bottom:15px;
+}
+
+.section-text{
+max-width:800px;
+margin:auto;
+text-align:center;
+margin-bottom:50px;
+color:#555;
+}
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+background:rgba(15, 15, 15, 0.95);
+backdrop-filter:blur(15px);
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+
+}
+
+.nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 7%;
+
+}
+
+.logo{
+
+font-size:32px;
+font-weight:800;
+font-family:"Cormorant Garamond",serif;
+color:var(--green);
+letter-spacing:2px;
+
+}
+
+.logo span{
+color:var(--gold);
+}
+
+.socials{
+
+display:flex;
+gap:15px;
+align-items:center;
+
+}
+
+.socials a{
+
+background:var(--green);
+color:white;
+padding:10px 14px;
+border-radius:50px;
+font-size:14px;
+transition:.3s;
+
+}
+
+.socials a:hover{
+background:var(--gold);
+transform:translateY(-3px);
+}
+
+.hero{
+
+padding-top:140px;
+min-height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+background:
+
+
+url("images/hero.jpg");
+
+background-size:cover;
+background-position:center;
+
+}
+
+.hero-content{
+
+max-width:900px;
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:65px;
+color:var(--green);
+font-family:"Cormorant Garamond",serif;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:18px;
+max-width:700px;
+margin:auto;
+color:var(--green);
+
+}
+
+.hero-btn{
+
+display:inline-block;
+margin-top:35px;
+background:var(--green);
+color:white;
+padding:16px 35px;
+border-radius:60px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+background:var(--gold);
+transform:translateY(-4px);
+
+}
+
+.products{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:var(--shadow);
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card img{
+
+height:270px;
+object-fit:cover;
+width:100%;
+
+}
+
+.card-content{
+
+padding:25px;
+
+}
+
+.card h3{
+
+color:var(--green);
+margin-bottom:10px;
+
+}
+
+.price{
+
+font-size:22px;
+font-weight:bold;
+color:var(--gold);
+margin:15px 0;
+
+}
+
+.btn{
+
+display:inline-block;
+background:var(--green);
+color:white;
+padding:14px 22px;
+border-radius:40px;
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:var(--gold);
+
+}
+
+.story{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:50px;
+align-items:center;
+
+}
+
+.story img{
+
+border-radius:20px;
+box-shadow:var(--shadow);
+
+}
+
+.story h3{
+
+font-size:30px;
+margin-bottom:20px;
+color:var(--green);
+
+}
+
+.values{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+
+}
+
+.value{
+
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:var(--shadow);
+text-align:center;
+
+}
+
+.value h3{
+
+margin:20px 0;
+color:var(--green);
+
+}
+
+.faq{
+
+max-width:900px;
+margin:auto;
+
+}
+
+details{
+
+background:white;
+margin-bottom:18px;
+padding:20px;
+border-radius:15px;
+box-shadow:var(--shadow);
+
+}
+
+summary{
+
+font-weight:bold;
+cursor:pointer;
+color:var(--green);
+
+}
+
+footer{
+
+background: black;
+color:white;
+padding:50px 7%;
+text-align:center;
+
+}
+
+footer p{
+
+margin:8px 0;
+
+}
+
+.whatsapp{
+
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:70px;
+height:70px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+font-size:32px;
+color:white;
+box-shadow:0 15px 30px rgba(0,0,0,.3);
+z-index:999;
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+
+}
+
+.hidden{
+
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.logo{
+
+font-size:26px;
+
+}
+
+.socials{
+
+gap:8px;
+
+}
+
+.socials a{
+
+padding:8px 12px;
+font-size:12px;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="nav">
+
+<div class="logo">
+EMY <span>BEAUTY</span>
+</div>
+
+<div class="socials">
+
+<a href="https://wa.me/242064456713" target="_blank">WhatsApp</a>
+<a href="https://www.tiktok.com/@emy_beauty0?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content hidden">
+
+<h1>Ton projet Raiponce commence ici</h1>
+
+<p>
+
+           Santé     - Croissance -    Résultats
+
+</p>
+
+<a href="#products" class="hero-btn">
+Découvrir nos produits
+</a>
+
+</div>
+
+</section>
+
+<section id="products">
+
+<h2>Nos Produits</h2>
+
+<p class="section-text">
+
+Découvrez notre collection de crèmes capillaires et d'huiles naturelles 100% bio, conçues pour nourrir, protéger et sublimer vos cheveux.
+
+</p>
+
+<div class="products">
+
+<div class="card hidden">
+
+<!--
+REMPLACER PAR VOTRE PHOTO
+<img src="images/creme1.jpg">
+-->
+
+<img src="images/creme.jpg">
+
+<div class="card-content">
+
+<h3>Emy Beauty Royal Cream</h3>
+
+<p>
+
+Hydrate profondément les cheveux secs, nourrit la fibre capillaire et facilite le coiffage.
+
+</p>
+
+<div class="price">5.000 FCFA</div>
+
+<a class="btn" href="https://wa.me/242064456713?text=Bonjour%20je%20veux%20commander%20Cr%C3%A8me%20Nutrition%20Intense" target="_blank">
+Commander sur WhatsApp
+</a>
+
+</div>
+
+</div>
+
+<div class="card hidden">
+
+<!--
+REMPLACER PAR VOTRE PHOTO
+<img src="images/huile.jpg">
+-->
+
+<img src="images/huile.jpg">
+
+<div class="card-content">
+
+<h3>Emy Beauty Royal Oil</h3>
+
+<p>
+
+Un mélange d'huiles végétales naturelles qui stimule la pousse et protège les racines.
+
+</p>
+
+<div class="price">5.000 FCFA</div>
+
+<a class="btn" href="https://wa.me/242064456713?text=Bonjour%20je%20veux%20commander%20Huile%20Naturelle%20Bio" target="_blank">
+Commander sur WhatsApp
+</a>
+
+</div>
+
+</div>
+
+<div class="card hidden">
+
+<!--
+REMPLACER PAR VOTRE PHOTO
+<img src="images/beurre.jpg">
+-->
+
+<img src="images/kit.jpg">
+
+<div class="card-content">
+
+<h3>Emy Beauty Golden Care Kit</h3>
+
+<p>
+
+Protège les pointes, réduit la casse et apporte douceur, éclat et souplesse.
+
+</p>
+
+<div class="price">8.000 FCFA</div>
+
+<a class="btn" href="https://wa.me/242064456713?text=Bonjour%20je%20veux%20commander%20Kit%20Capillaire%20Premium" target="_blank">
+Commander sur WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Nos Origines</h2>
+
+<div class="story">
+
+<div class="hidden">
+
+<img src="images/origine.jpg" alt="Notre histoire">
+</div>
+
+<div class="hidden">
+
+<h3>Une histoire inspirée par la nature</h3>
+
+<p>
+
+EMY BEAUTY est née d'une passion pour les soins naturels transmis de génération en génération.
+Notre objectif est de valoriser les richesses végétales africaines et le savoir-faire ancestral
+afin d'offrir des soins efficaces, doux et respectueux de toutes les textures capillaires.
+
+</p>
+
+<br>
+
+<p>
+
+Nos formules sont inspirées des ingrédients locaux tels que le beurre de karité,
+l'huile de ricin, l'huile de coco, l'aloe vera et d'autres extraits végétaux réputés
+pour leurs bienfaits exceptionnels.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Nos Motivations</h2>
+
+<p class="section-text">
+
+Parce que chaque chevelure mérite des soins naturels et bienveillants.
+
+</p>
+
+<div class="values">
+
+<div class="value hidden">
+
+<h3>🌿 Naturel</h3>
+
+<p>
+
+Des ingrédients soigneusement sélectionnés sans substances agressives.
+
+</p>
+
+</div>
+
+<div class="value hidden">
+
+<h3>❤️ Santé</h3>
+
+<p>
+
+Préserver la beauté naturelle des cheveux tout en respectant le cuir chevelu.
+
+</p>
+
+</div>
+
+<div class="value hidden">
+
+<h3>🌍 Qualité</h3>
+
+<p>
+
+Une fabrication inspirée des traditions et enrichie par les connaissances modernes.
+
+</p>
+
+</div>
+
+<div class="value hidden">
+
+<h3>✨ Excellence</h3>
+
+<p>
+
+Offrir des produits premium accessibles à toutes les femmes.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>FAQ</h2>
+
+<div class="faq">
+
+<details>
+
+<summary>Les produits sont-ils 100% naturels ?</summary>
+
+<p>Oui. Nos soins privilégient des ingrédients naturels soigneusement sélectionnés.</p>
+
+</details>
+
+<details>
+
+<summary>Conviennent-ils aux cheveux afro et bouclés ?</summary>
+
+<p>Oui. Ils sont adaptés aux cheveux afro, crépus, bouclés, ondulés, secs et abîmés.</p>
+
+</details>
+
+<details>
+
+<summary>Comment commander ?</summary>
+
+<p>Il suffit de cliquer sur le bouton "Commander sur WhatsApp".</p>
+
+</details>
+
+<details>
+
+<summary>Livrez-vous dans tout le pays ?</summary>
+
+<p>Oui selon les zones de livraison disponibles.</p>
+
+</details>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2 style="color:white;">Contact</h2>
+
+<p>📍 Brazzaville - Congo  📞 +242 06 951 22 </p>
+
+<br>
+
+<p>
+
+© 2026 EMY BEAUTY — Product by RMP RECORD.
+
+</p>
+
+</footer>
+
+<a
+class="whatsapp"
+href="https://wa.me/242064456713?text=Bonjour%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20produits."
+target="_blank">
+
+💬
+
+</a>
+
+<script>
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+</html>
